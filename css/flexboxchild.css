@@ -1,0 +1,66 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid red;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+/* Flex items */
+.container div {
+    height: 50px;
+    border: 2px solid blue;
+    background-color: aqua;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Grow example */
+.grow-demo {
+    width: 800px; 
+    height:200px;
+    padding-top:0px;
+}
+.item1 { 
+    flex-grow: 1; width: 50px; 
+}
+.item2 {
+     flex-grow: 2; width: 50px;
+     }
+.item3 { 
+    flex-grow: 3; width: 50px;
+    align-self: flex-end; 
+}
+.item4 {
+    flex-basis:150px; /* this grows after the 150pxpx  and if u give auto it take the width of the content ok na and auto is appliciable only if there is not conatiner width*/
+    flex-grow:1; 
+}
+.item5 {
+  align-self: flex-end; /* this box moves to the bottom of the container */
+}
+
+.item1 { 
+     order: 0; 
+    }  /* here we gave 0 ok na so it stays in the same place not chnaging  */
+.item2 {
+     order: -1; 
+    } /* appears first but 345 is defalut which is set to 0 so it takes the 1st order if u want 21345 in this order set 2 to -1 1 to 0 u will get*/
+ /* u can make use like this also flex {flex-grow,shrink,basis,align-self */
+
+/* Shrink example */
+.shrink-demo {
+    width: 200px;
+}
+.item-shrink { 
+    flex-shrink: 1; width: 150px; 
+}
+.item-no-shrink {
+     flex-shrink: 0; width: 150px;  /*no shrink here */
+}

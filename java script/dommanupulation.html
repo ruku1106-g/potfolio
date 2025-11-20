@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom </title>
+</head>
+<body>
+    <h1 id="head">Heading</h1>
+    <h1 id = "h">Heading</h1>
+    <p class="p">para 1</p>
+    <p>para 2</p>
+    <p class="p">para 3</p>
+    <p>para 4</p>
+    <script>
+    //manipulation of DOM in js
+   document.getElementById("head").textContent="DOM in java script"; // so here we are maing use of textContent to fetch the content inside the head --> 
+
+   document.getElementById("head").innerText="DOM in java "; // innerText  its same as textContent but u cant use both innerText and innerHTML at a time only 1 u can make use of 
+   
+   document.getElementById("h").innerHTML = "<u><i> DOM JS </i></u>"; //if we want tot chnage the text and the structure we make use of innerHTML
+  
+  const h1 = document.getElementById("head"); 
+   h1.innerHTML ="<i>hello javascript!!</i>"; 
+   h1.style.color="blue";
+   h1.style.backgroundColor="pink";
+   h1.style.fontSize = "38px";
+  
+
+   const h2=document.getElementById("h");
+   h2.textContent="Hello developers";
+   h2.style.color="yellow";
+   h2.style.backgroundColor="green";
+  
+  </script>
+</body>
+</html>

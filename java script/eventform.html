@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Form and input Events Demo</h1>
+   
+    <form id="myForm">
+    <label> enter your name:</label>
+    <br>
+    <input type="text" placeholder="type something" name="username">
+    <br><br>
+    <button type="submit">submit</button>
+    </form>
+
+</body>
+<script>
+    //form
+    //submit --imp
+    document.getElementById("myForm").addEventListener('submit', (event) => {
+   event.preventDefault();
+        alert("form submitted!");
+    });
+
+    //change
+    document.getElementById("myForm").addEventListener('change', (event) => {
+        alert(`Input changed to: ${event.target.value}`);
+    });
+
+//focus
+    //when ever we highlight/inside the input field then its an focus 
+    document.getElementById("myForm").addEventListener('focus', (event) => {
+        console.log("input field focus!");
+    });
+
+    //blur
+    //when u come away from the input field then it is called as blur
+    document.getElementById("myForm").addEventListener('blur', (event) => {
+        console.log("input field lost focus!");
+    });
+
+    //input -- vv imp
+    document.getElementById("myForm").addEventListener('input', (event) => {
+        console.log(`current value ${event.target.value}`);
+    });
+    
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gucci</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 2 per row (left & right) */
+      gap: 30px;
+      max-width: 1000px;
+      background-color: antiquewhite;
+      margin: auto;
+    }
+    .product {
+      text-align: center;
+    }
+    .product img {
+      width: 100%;          /* make image fill container */
+      max-width: 400px;     /* limit size so not too huge */
+      border-radius: 12px;
+    }
+    .product p {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+    .product s {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+    <hr>
+  <h1><b>GUCCI</b></h1>
+  <hr>
+  <video src="\html\media\Presenting the New Gucci Allegoria High Jewelry Collection - GUCCI (1080p, h264).mp4" controls width="100%" height="600px" autoplay loop ></video>
+  <p style="text-align:center;"><i>Here is our popular jewels</i></p>
+<audio src="\html\media\Night.mp3" controls loop></audio>
+  <div class="products">
+    <!-- Bracelet -->
+    <div class="product">
+      <a href="https://youtu.be/aQ_j_uy6AnE?si=7xIp-rCAL2SLX5kZ" target="_blank">
+      <img src="/html/media/brac.jpeg" alt="Gold Bracelet"></a>
+      <p>the diamond bracelet <s>$600</s> $400</p>
+    </div>
+
+    <!-- Earring -->
+    <div class="product">
+      <img src="/html/media/earring.jpeg" alt="Gold Earring">
+      <p>the gold earring <s>$350</s> $220</p>
+    </div>
+
+    <!-- Ring -->
+    <div class="product">
+      <img src="/html/media/ring.jpeg" alt="Gold Ring">
+      <p>the gold ring <s>$500</s> $320</p>
+    </div>
+
+    <!-- Chain -->
+    <div class="product">
+      <img src="/html/media/chain.jpeg" alt="Gold Chain">
+      <p>the gold chain <s>$800</s> $560</p>
+    </div>
+
+    <!-- Necklace -->
+    <div class="product">
+      <img src="/html/media/neck.jpeg" alt="Gold Necklace">
+      <p>the diamond necklace <s>$1200</s> $890</p>
+    </div>
+    <div class="product">
+      <img src="/html/media/watch.jpeg" alt="Gold Necklace">
+      <p>the diamond watch <s>$1200</s> $890</p>
+    </div>
+  </div>
+</body>
+</html>

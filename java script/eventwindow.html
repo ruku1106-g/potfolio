@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events - Window</title>
+    <style>
+        body{
+         height:2000px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scroll or resize the window and check the console</h1>
+    <script>
+        //window events
+        // domcontentloaded: whenever the page is fullt loaded i need to this message to be diplayed
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM is fully loaded');
+        });
+
+        //resize
+        window.addEventListener('resize', () => {
+            console.log('window resized');
+        });
+
+        //scroll
+        window.addEventListener('scroll', () => {
+            console.log('user is scrolling');
+        });
+    </script>
+</body>
+</html>

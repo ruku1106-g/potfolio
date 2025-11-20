@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop ups</title>
+</head>
+<body>
+    <h1> pop ups in js</h1>
+    <script>
+        
+        //alert
+        alert("you opened chrome browser");
+
+        //confirm
+        let result=confirm("do you want to delete this item?");
+        console.log(result);
+        if(result){
+            document.writeln("user clicked ok");
+        }
+        else{
+            document.writeln("user clicked cancel");
+        }
+        document.writeln("<br>");
+       
+        //promt
+
+        let name=prompt("enter your name");
+        document.writeln("hello ",name);
+
+        //write a program to add 2 numbers by collecting the input from promt
+        //collect i/p from the user
+        let num1 = prompt("enter the 1st number:");
+        let num2 = prompt("enter the 2nd number:");
+
+        //convert i/p from string to number
+        num1 = Number(num1);
+        num2 = Number(num2);
+
+        //add the numbers
+        let sum = num1+num2;
+
+        document.writeln(sum);
+    </script>
+</body>
+</html>

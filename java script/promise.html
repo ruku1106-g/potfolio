@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+   <script>
+     p = new Promise((resolve, reject)=> { // saying the we have 2 states
+       let app="BMS";
+        if(app === "BMS") // if its true 
+            resolve("1.open Bms"); // we will pass this to then(); as an promise 
+        else 
+            reject("not found BMS"); // else it acts as an try and pass this as an exception to the catch
+        }) 
+    .then((msg)=> { // to execute the 1st one we need to pass the o/p and . refers to the current object and if u want u can give p.then()
+        console.log(msg);  
+        console.log("2.search movies");
+    })
+    .then(()=>{
+        console.log("3.select seat");
+        return "select snacks"; //wht we return here will be passed as an arugument to the next .then();
+    })
+    .then((lastResult)=>{    // here we will be using this over here as an arugument
+        console.log(lastResult);
+        console.log("4.ticket booked");
+    })
+    .catch((e)=>{ // and here we are not making use of try as we are giving reject and reject acts like an throw over here and arrow function is also not nessacry, and try is used here as its asynchronos and promises have their own error mechanism . catch();
+        console.log(e);
+        })
+        .finally(()=>{
+            console.log("close the app");
+        }) ;  
+
+   </script>
+</body>
+</html>

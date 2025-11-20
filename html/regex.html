@@ -1,0 +1,90 @@
+<!-- Regular Expression (RegExp)
+ so its all about validation in frontend and inseatd of sendong it to the server for validation we can validate it in front end and it is known as client- side validation
+ so we need to do like this
+ <pattern = "regEx">
+    you have to start the regEx with ^ and end with $ .
+    w
+    you can do like this
+    ^ - start/beginning
+    $ -end
+    [] - alphabet,digits,special char
+    {}- range 
+    {2,}- means min u need to have 2 and max infinte
+    {2} - only 2 char
+    {2,30}- means min 2 and max 30
+    capital - [A-Z]
+    small letters- [a-z]
+    both  - [A-Za-z]
+    digits - [0-9] or /d which is also same has 0-9
+
+    indise the regex we need to perform based on wht u need
+ -- (regEx1)
+ if u want alphabets only and with range
+ pattern ="^[A-Za-z]{2,30}"
+ 
+ -- (reg2)
+ i need a name should be in title which is 1st letter capand remaining small , so we can do like this
+pattern =  "^[A-Z]{1}[a-z]{1,30}$"   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegEx</title>
+</head>
+<body>
+<form>
+    <h1>login form</h1>
+    <!--name-->
+    <label for="name">first Name:</label>
+    <input type = "text" id="name" name="name" placeholder="enter your name" pattern="^[A-Za-z]{2,30}$"> <!-- this is mix of alpha -->
+   <br>
+   <label for="name">first Name:</label>
+    <input type = "text" id="name" name="name" placeholder="enter your name" pattern="^[A-Z]{1}[a-z]{1,30}$"><!-- it has 1st letter cap and all small-->
+    <br>
+    <br>
+       <label for="name">first Name and last name:</label>
+    <input type = "text" id="name" name="name" placeholder="enter your name" pattern="^[A-Z]{1}[a-z]{1,30}[ ]{1}[A-Z]{1}[a-z]{2,30}$"><!-- it has 1st letter cap and all small and a space also 
+    or u can do like this also pattern="^[A-Z]{1}[a-z ]{1,30} [A-Z]{1}[a-z]{2,30}$" and if the user dont have last name pattern="^[A-Z]{1}[a-z ]{1,30} [A-Z]{0,1}[a-z]{0,30}$">>-->
+    <br>
+
+    <!-- number-->
+    <label for="number">number:</label>
+    <input type = "number" id="number" name="number" placeholder="enter your number" pattern="^[1-9]{3}-[1-9]{3}-[1-9]{4}$"><!-- it number and u can make use of \d instead of 0-9-->
+    <br>
+    <label for="tel">ph no:</label>
+    <input type = "tel" id="tel" name="tel" placeholder="enter your number" pattern="^[6-9]{1}\d{9}$"><!-- it number and u can make use of \d instead of 0-9-->
+    <br>
+    <!-- indian number-->
+    <label for="tel">ph no:</label>
+    <input type = "tel" id="tel" name="tel" placeholder="enter your number" pattern="^+91-[6-9]{1}\d{2}-\d{3}-\d{4}$"><!-- it number and u can make use of \d instead of 0-9-->
+    <br>
+   <!-- any country-->
+     <label for="tel">ph no:</label>
+    <input type = "tel" id="tel" name="tel" placeholder="enter your number" pattern="^+[1-9]{2,3}-[6-9]{1}\d{2}-\d{3}-\d{4}$"><!-- it number and u can make use of \d instead of 0-9-->
+    <br>
+
+    <!-- password validation--><!-- (.)  dot means it can take any number of char ok naa-->
+     <label for="pwd">passowrd</label>
+     <input type="text" id="pwd" name ="password" pattern="^.{8,}$" title="atleast 8 char" > <!-- it takes any char and symbols everything and even numbers also-->
+         
+     <label for="pwd">passowrd</label>
+     <input type="text" id="pwd" name ="password" pattern="^[A,Z]{1,}[a-z]{1,}[0-9]{1,}[!@#$%^&*()]{8,}$" title="atleast 8 char" > <!-- it takes in the same order thats the disadvantage so we have lookahead-->
+   
+            
+     <label for="pwd">passowrd</label>
+     <input type="text" id="pwd" name ="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$">  <!-- in any order u can do but no special char-->
+          <label for="pwd">passowrd</label>
+     <input type="text" id="pwd" name ="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$">  <!-- in any order u can do and special char-->
+<br>
+     <!-- email-->
+    <label for="mail">email:</label>
+    <input type="email" id="mail" name ="email" pattern="^[A-Za-z0-9._+\-]+@[A-Za-z0-9.+\-]+\.[a-zA-Z]{2,5}$">  <!-- so here we used + for conact and +\. and for \- also becaiuse . is used as an specail char for accesing all char  so we \ which makes the . as normla .-->
+     
+    <label for="mail">email:</label>
+    <input type="email" id="mail" name ="email" pattern="^.+@kodnest.com$">  <!-- so here we used + for conact and +\. becaiuse . is used as an specail char for accesing all char  so we \ which makes the . as normla .-->
+     <button type="submit">login</button>
+</form>
+</body>
+</html>

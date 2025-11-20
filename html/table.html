@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables in html</title>
+</head>
+<body>
+    <center> <!-- this will make the table center -->
+    <table border> <!-- to create a border and u can give like this also by default it is set to 1 px and if u want to increase it u can like this border="1px" how many pixels also -->
+        <tr><!-- this is 1st column heading-->
+            <th>name</th> <!-- and wht ever u give in th that is table heading ok na and that will be bolded-->
+            <th>id</th>
+            <th>age</th>
+        </tr>
+         <tr> <!-- this is 1st row--> 
+            <td>anu</td> <!-- td is an table data where we will be inserted data into an row wise-->
+            <td>101</td>
+            <td>23</td>
+        </tr>
+         <tr> <!-- this is 2nd row-->
+            <td>ram</td>
+            <td>102</td>
+            <td>24</td>
+        </tr>
+         <tr> <!-- this is 3rd row-->
+            <td>amit</td>
+            <td>103</td>
+            <td>23</td>
+        </tr>
+    </table>
+</center> <!-- this will make the table center -->
+        <table border="1px">
+            <h5>convert this table into col span and row span</h5>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <table border="1px">
+            <tr>
+                <td colspan="4">1</td>
+            </tr>
+            <tr>
+                <td rowspan="2">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td rowspan="2">4</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td colspan="4">1</td>
+            </tr>
+        </table>
+</body>
+</html>

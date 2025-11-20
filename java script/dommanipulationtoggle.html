@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom maipulation styles </title>
+<style>
+    body{
+       background-color:white;
+       transition-duration: 2s; 
+    }
+    .dark-mode {
+        background-color:rgb(8, 8, 8);
+        font-weight:bold;
+    }
+</style>
+</head>
+
+<body>
+   
+    <button onclick="toggle()">Dark/Light mode click here</button>
+    
+    <script>  
+function toggle(){
+    document.body.classList.toggle("dark-mode");
+}
+    </script>
+</body>
+</html>

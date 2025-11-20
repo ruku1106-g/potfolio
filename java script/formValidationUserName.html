@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+</head>
+<body>
+  <form id="myForm">
+    <!-- Username - not emplty, min2 , max 30, it should consists only alpha-->
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter your name">
+    <p style="color:red;" id="userError"></p>
+    
+    <!-- Password -->
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" placeholder="Enter password">
+    <p style="color:red;" id="pwdError"></p>
+    
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("myForm");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault(); // stop page reload
+
+      // Username validation
+      const username = document.getElementById("username").value.trim();
+      const unregex = /^[A-Za-z]{2,30]$/; // here in regex we need to put inside / / 
+
+      if (username === "") {
+        document.getElementById("userError").innerHTML = "Username can't be empty";
+        return;
+      } else if (username.length < 2) {
+        document.getElementById("userError").innerHTML = "Name must be at least 2 characters";
+        return;
+      } else if (username.length > 30) {
+        document.getElementById("userError").innerHTML = "Name can't be more than 30 characters";
+        return;
+      } else if (!unregex.test(username)) {
+        document.getElementById("userError").innerHTML = "Only letters allowed (A–Z, a–z)";
+        return;
+      }
+
+      // Password validation
+      const password = document.getElementById("pwd").value;
+      const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+      if (!passwordPattern.test(password)) {
+        document.getElementById("pwdError").innerHTML =
+          "Password must have 8+ chars, include letters, numbers & a special symbol (@$!%*?&)";
+        return;
+      }
+
+      // If everything is fine
+      alert("Form submitted successfully!");
+    });
+  </script>
+</body>
+</html>

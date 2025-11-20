@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations</title>
+    <style>
+        .trans {
+            height:100px;
+            width:100px;
+            border: 2px solid black;
+            background-color:aqua;
+
+            transform:translate(100px,100px); 
+            /* this is trnsformation if u give just + value (100) it moves to right, if u give - its moves to left and if u want to move up and down
+            for down u should give like this (0,100px)(x,y) , so here it goes down and if u give - like this (0,-100)(x,-y) it goes to up ,
+            if u give the (100,0) so its like moving right(x) and if u give (100px , 100px) its like moving right and down at a time  
+            and if u give in -ve the bith values then it will go to left and up , and if u give in % it will consider with the div width*/
+        }
+
+        .scale {
+            height:100px;
+            width:100px;
+            border: 2px solid black;
+            background-color:aqua;
+            transform:translate(300px,400px);
+        }
+    .scale:hover {
+            transform:scale(10,2);
+            transition-duration:5s;  /* this takes 5 s */
+            transition-delay: 2s;  /* this deplays 2 sec */
+        }
+            /* this also considers  x and y axis , if u give x and y it grows in wdith and height and if u give only x it gwors the width and height equally */
+
+
+            .rotate {
+            height:100px;
+            width:100px;
+            border: 2px solid black;
+            background-color:aqua;
+
+        }
+        .rotate:hover {
+            transform:rotate(360deg);
+            /* so here we can make 720 it will continiously spin and if u give +ve clockwise and -ve anticlock wise */
+            transition-duration:4s; 
+        }
+
+         .skew {
+            height:100px;
+            width:100px;
+            border: 2px solid black;
+            background-color:aqua;
+        }
+        .skew:hover {
+            transform:skew(40deg,25deg);
+            /* if u give +25 it will tilt in only x axis and if we want to tilt in y axis we can give like  (0,25deg) 
+            if u need to tilt it up give - and if u want to tilt in x and y both u can use (400deg ,-25deg)*/
+        transition-duration:4s; 
+    }
+
+
+    .tranform-origin {
+         height:100px;
+            width:100px;
+            border: 2px solid black;
+            background-color:aqua;
+        }
+        .tranform-origin:hover {
+         transform-origin: top left;
+         /* if u want to mention the origin u can use this it like if u tell bottom right it hold in bottom right and rotate */
+         transform:rotate(360deg);
+         transition-duration:4s; 
+        }
+    </style>
+</head>
+<body>
+    <div class="trans">
+    translate
+    </div>
+
+    <div class="scale">
+      sclae
+    </div>
+
+    <div class="rotate">
+      rotate
+    </div>
+
+    <div class="skew">
+      skew
+    </div>
+
+    <div class="tranform-origin">
+      tranform-origin
+    </div>
+</body>
+</html>

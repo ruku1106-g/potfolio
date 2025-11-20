@@ -1,0 +1,26 @@
+* {
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box; 
+}
+/* parent container */
+.container{
+ border: 2px solid red;
+ width:600px;
+ height: 300px;
+ display: flex; /* display() if u dont give like this it will be arranges in block and if u give ,it will be stored in inline and the properties are inline and flex*/ 
+flex-direction:row; /* flex-directiondefalut is row, row-reverse will reverse , column means gives in verticle and column reverse it will vertically reverse */
+ gap: 10px;/* if u want to give space / gpa b/w div we can use this */
+/* justify-content: used for horizontally alignment flex-start; we have flex-start, flesx-end, center, base-line, firstbase-line, lastbase-line, space-around, space-between, space-evenly  we can make use of all thiss */
+
+align-items:center; /* used for vertically alignment we have stretch which is used to stretch ok na we need to remove the height or else it wont work, and we have center, flez-start,flex-end, center, baseline */
+flex-wrap:wrap;  /* this is used to just fit inside the conatiner no scrolling and all and it have 3 property no wrap wrap, wrap-reverse */
+ align-content:space-around;/* when we have flex-wrap , justify will not work so we have one more like align-content and we can use align-content will be only used when we make use of flex-wrap or else nooo we cant use*/
+}
+
+.container div {
+   width: 100px;
+   height:50px;
+   border: 2px solid blue;
+   background-color: aqua; 
+}

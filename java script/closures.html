@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function x() {
+  var a = 10;
+  function y() {
+    console.log(a);
+  }
+  return y; //so here we are returning the function as an o/p to another function ,this is HOF
+}
+
+let res = x(); // u are storing it in the res container as the value will be deleted once the memeory for x() will be deleted 
+console.log(res); // this returns the f y () {console.log(a); } because y return to the y
+res(); //10 and u can make variable as an function as well only if we are storing the function in  it
+
+
+    </script>
+</body>
+</html>

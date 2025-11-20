@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframes in html</title>
+</head>
+<body>
+    <!-- iframes arer inline frame are the separate frame which is given inside the html document or a web page inside a web page -->
+<h2 style="text-align: center;">This is my web page</h2>
+<iframe src="https://www.kodnest.com" width="400px" height="400px" name=""></iframe>
+<iframe src="https://www.kodnest.com" width="400px" height="400px" frameborder="0"></iframe><!-- so here we arer giving the frameborder as 0 so there will be no border and if we give 1 it has border-->
+<iframe src="https://www.kodnest.com" name="f1" width="400px" height="400px" scrolling="no"></iframe> <!--and if u want to identify the iframe u can name it like this name ="f1" and  inside the iframe if we dont want scrolling we can set like thid-->
+<iframe srcdoc='<h2>hello welcome</h2> <a href="https://kodnest.com" target="_blank">click here to visit kodnest</a> <a href="https://kodnest.com" target="f2">click here to view in next iframe</a>' width="600px" height="400px" scrolling="yes"></iframe>
+<!-- when u want to write your own message u can use this scrdoc  or when u want to write externally meassage and enclosed within '  '
+  and we have used <a> because we want to go to next page and we have like this if u want to display the url in the same browser but in differnet iframe u can use target as shown above-->
+<iframe srcdoc='<h3>hello welcome</h3>' width="600px" height="400px" scrolling="yes" name="f2"></iframe>
+</body>
+</html>

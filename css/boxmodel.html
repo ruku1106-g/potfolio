@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box model</title>
+    /* box model interview questions
+    -- by default do we have the margin
+    -- 4componts of box model content,padding,border,margin and border
+    --when ever we give the box-sizing it will not affect the margin but it will affect the border and 
+            border:5px solid blue; so here we added paddign and border but it will not exceed the width ok na because we used box sizing*/
+<style>
+        * {
+            margin: 0px;  /* when u use px its fixed and when u reduce the screen size it will overlap so we can choose % or em  which is fluid which will be responsive */
+        }
+        div {
+            width: 500px;
+            height :100px;
+            background-color:aqua;
+            padding: 50px 30px 100px 100px; /* -4 sides, if u give 2 values 1st value is applied for top and bottom and 2nd value is applied for left and right
+            if u give 3 values its 1st is top 2nd is left,right and 3rd is bottom 
+            if it has 4 values top, right ,bottom left*/
+            padding-left :200px;
+
+           /* border-width: 4px; bad way of writing it so we need to do like this
+            border-style: solid;
+            border-color: deeppink; */
+            border: 10px double deeppink; /*we have like dashed, double solid ,dotted as well in border*/
+
+            margin:50px;  /* its like pusing the content down and right side*/
+            margin:50px 100px; /* you can use multiple values also*/
+            margin-top:50px; /*or something like this as well*/
+           
+            outline:5px dashed yellowgreen; /* we can give dashed, dotted , solid double for the otline and outline and border are different*/
+            overflow : scroll; /* auto(is scroll), hidden, scroll,visible it scroll in the y axis which is right side  */ 
+            overflow-x : scroll; /* auto, hidden, scroll,visible and x axis is used to give scroll in down also */ 
+        }
+    </style>
+</head>
+<body>
+<div>KODNEST Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem reiciendis facere vero quibusdam expedita ex in voluptas dolor, libero officia, aut commodi ut necessitatibus esse omnis maxime nulla temporibus hic.
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam accusamus alias modi, facilis autem delectus. Adipisci nam reprehenderit, asperiores cupiditate dolorum voluptatem laborum sapiente aperiam deserunt in ut dolores a?
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium consequuntur praesentium, sit non tempore tenetur est accusamus maiores atque quasi, enim quidem magni provident inventore eligendi deleniti accusantium sunt quia?
+loreKODNEST Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem reiciendis facere vero quibusdam expedita ex in voluptas dolor, libero officia, aut commodi ut necessitatibus esse omnis maxime nulla temporibus hic.
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam accusamus alias modi, facilis autem delectus. Adipisci nam reprehenderit, asperiores cupiditate dolorum voluptatem laborum sapiente aperiam deserunt in ut dolores a?
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium consequuntur praesentium, sit non tempore tenetur est accusamus maiores atque quasi, enim quidem magni provident inventore eligendi deleniti accusantium sunt quia?
+lore</div>
+</body>
+</html>

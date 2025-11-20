@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function takes another function as an arugument
+        function order (callprepare) { // so here we pass the call prepare as an argument to the order because we need the prepare to be executed only if the order is placed
+ console.log("coffee ordered");
+ callprepare();
+}
+
+function prepare () { //call back function
+console.log("start preparation");
+}
+
+order(prepare);  //and pass the arugument of one function inside the another  function
+
+    </script>
+</body>
+</html>

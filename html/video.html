@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video tag</title>
+</head>
+<body>
+    <video src="/html/media/margo1.mp4"
+    controls autoplay  loop width="400px" height="600px"></video> <!-- here we can are using control to get all the mute,unmute,volume,alll extra features and autoplay for autoplay , and loop once completing the video-->
+    <video src="/html/media/margo1.mp4"
+    controls muted autoplay loop poster="/html/media/margo.jpeg" width="400px" height="600px"></video> <!-- here we can add poster only if we dont have the autoplay or else we cant-->
+<audio src="/html/media/Margo .mp3" controls ></audio><!-- audio without controls wont work , it will be blank -->
+<audio src="/html/media/Margo .mp3" controls muted loop></audio><!-- 1st it will be muted if u want u can unmute -->
+<audio src="/html/media/Margo .mp3" controls autoplay mute></audio><!-- its autoplay automatically playes in the beginning-->
+</body>
+</html>

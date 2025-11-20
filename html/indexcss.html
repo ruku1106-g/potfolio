@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css page</title>
+    <!-- css we are using verion 3-->
+    <!--internal css we write a block of declaration in the html itself--> 
+    <style> 
+        p{
+            color:blue;
+            text-align:right;
+            background-color:yellow;
+        }
+    </style>
+<!-- external css is this-->
+        <link href="index.css" rel="stylesheet">
+</head>
+<body>
+<!-- inline and the 1st priority is for inline always -->
+    <p style="color:red;text-align:center; text-decoration:underline; background-color: aqua;">Paragraph</p>
+    <p>paragraph</p>
+    <p>paragraph</p>
+<!-- 1st priority has internal and next priority for the css which has before the  </head> not the 1st one in head but the last one in within the head -->
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom attribute </title>
+</head>
+<body>
+
+    <h2>attribute dom manipulation</h2>
+    <a href="https://www.kodnest.com"> click here for Kodnest</a>
+    <br>
+    <br>
+    <button onclick="setAtr()">set attribute</button>
+     <button onclick="getAtr()">get attribute</button>
+      <button onclick="removeAtr()">remove attribute</button>
+      
+   <script>
+    let link = document.querySelector("a");
+  
+    function  setAtr(){
+    link.setAttribute("href","https://facebook.com");
+    link.textContent="click here for facebook";
+    }
+
+    function getAtr(){
+        let url = link.getAttribute("href");
+        alert("current href is: "+url);
+    }
+
+    function removeAtr() {
+        link.removeAttribute("href");
+        alert("the 'href' attribute was removed");
+    }
+   </script>
+</body>
+</html>

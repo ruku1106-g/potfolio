@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- utf 8 is 32 thousand-->
+    <!-- meta is an information given to the browser head , view port is ntg but browser where u will view ur project and the content is setting it to the device width and initial scale is setting to 1.0 which is setting it into constant page not zoom in or zoom out-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>media queries</title>
+    <style>
+        @media (min-width:480px) { /*so here min is like above */
+            body{
+                background-color:pink;
+            }
+            h1{
+                font-size:40px;
+                color:black;
+            }
+        }
+        /* tablet */
+        @media (min-width:768px){
+            body {
+                background-color:orange; 
+            }
+            h1{
+                font-size:70px;
+                color:blue;
+            }
+        }
+        /*laptop */
+        @media (min-width:1020px){
+            body{
+                background-color: aqua;
+            }
+            h1 {
+                font-size: 50px;
+                color:rgb(181, 46, 69);
+            }
+        }
+        @media (min-width:1px) and (max-width:480px){ /*so here max is like below */
+            body{
+                background-color:rgb(123, 87, 32);
+            }
+            h1{
+                font-size:70px;
+                color:rgb(248, 248, 250);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Welcome to Media Queries</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi culpa asperiores esse odio laboriosam voluptates officia dolorem veniam similique reiciendis nam, vero neque magni molestiae! Dignissimos labore quisquam deleniti dolor.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta pariatur consequuntur voluptas quam inventore repellat laboriosam veniam architecto? Illum unde nam commodi ad. Officia aliquam nulla, numquam nam excepturi quae!</p>
+</body>
+</html>

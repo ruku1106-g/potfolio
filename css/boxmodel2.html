@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box model 2</title>
+    <style>
+    * {
+         margin:0px;
+         padding:0px;
+    }
+    #normaldiv { /* here we didnt give box-sizing which leads to increase in size of the width like it take 220 whcih is 200 and 10 10 padding*/
+        width: 200px;   
+        height: 50px;
+        background-color: aquamarine;
+        padding: 10px; 
+        border:5px solid blue; /* so here we are again giving the border which takes again  5 and 5 px whixh is total of 230 px*/
+        margin:10px;
+    }
+     #borderdiv {
+        width: 200px;
+        height: 50px;
+        background-color: aqua;
+        box-sizing: border-box; /* if u need the width to be same as u given even though u give padding and border it will be same there are 2properties, conctenta nd border and default is content*/
+        padding: 10px;
+        border:5px solid blue;/* so here we added paddign and border but it will not exceed the width ok na because we used box sizing*/
+        margin:10px; /* when ever we give the box-sizing it will not affect the margin*/
+}
+    #contentdiv {
+        width: 200px; 
+        height: 50px;
+        background-color: aqua;
+        box-sizing: content-box;
+        padding: 10px;
+    margin:10px; 
+}
+        </style>
+</head>
+<body>
+    <div id="normaldiv">Kodnest normal</div> <br>
+    <div id="borderdiv">Kodnest border div</div> <br>
+    <div id="contentdiv">Kodnest contentdiv</div>
+</body>
+</html>

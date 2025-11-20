@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronus</title>
+</head>
+<body>
+  <script>
+//synchronus
+     console.log("open book my show App");
+    console.log("search movie");
+    console.log("select time");
+    console.log("select seat");
+    console.log("book ticket");
+
+// asynch but not in proper order because it will execute based on time which has least time
+
+//     setTimeout(() => {
+//  console.log("open book my show App");
+//     },1000);
+//     setTimeout(() => {
+//          console.log("search movie");
+//     },5000);
+//     setTimeout(() => {
+//          console.log("select time");
+//     },3000);
+//     setTimeout(() => {
+//          console.log("select seat");
+//     },8000);
+//     setTimeout(() => {
+//         console.log("book ticket");
+//     },2000);
+
+//if we do like this it will execute according to the time 
+
+// asynchrous to synchrous - call back ,so will be making use like this // this nested function are called as Event Loop
+ setTimeout(() => {
+ console.log("open book my show App");
+    setTimeout(() => {
+         console.log("search movie"); // this will wait to execute 1st 
+     setTimeout(() => {
+         console.log("select time"); // this will wait to execute 1st , 2nd
+     setTimeout(() => {
+         console.log("select seat"); // this will wait to execute 1st 2nd,3rd
+     setTimeout(() => {
+        console.log("book ticket"); // this will wait to execute 1st 2nd 3rd 4th
+       },2000);
+    },8000);
+   },3000);
+  },5000);
+},1000);
+  </script>  
+</body>
+</html>

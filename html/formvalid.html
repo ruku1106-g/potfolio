@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+</head>
+<body>
+    <form>
+    <h1>Student Information Form</h1>
+    <fieldset>
+        <br>
+        <legend>Personla Information</legend>
+        <label for="username">Full Name:</label>
+        <input type="text" id="username" name="full name" pattern="^[A-Za-z ]{1,30}$">
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" pattern="^[A-Za-z0-9]{1,30}@gmail.com$">
+        <br><br>
+        <label for="password">password:</label>
+        <input type="password" id="password" name="password" pattern="^[A-Za-z0-9!@#$%^&*]{1,30}$">
+        <br><br>
+        <label>Date and time:</label>
+      <input type="datetime-local"><br><br> 
+        <br>
+        <br>
+        <label for="bio">short Bio:</label>
+        <textarea id="bio" name="bio" rows="5" cols="30" placeholder="Tell us about yourself"></textarea>
+        <br>
+    </fieldset>
+<br>
+    <fieldset>
+        <legend>Gender</legend>
+        <label>
+        <input type="radio" name="gender" value="option1">male
+    </label><br>
+         <label>
+         <input type="radio"  name="gender" value="option2">female
+        </label><br>
+         <label>
+         <input type="radio"  name="gender" value="option3">others
+        </label><br>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Area of Interest</legend>
+         <label>
+        <input type="checkbox" name="Area of Interest" value="Web Development">Web Development
+    </label><br><br>
+         <label>
+        <input type="checkbox"  name="Area of Interest" value="AI">AI
+    </label>
+        <br><br>
+         <label>
+         <input type="checkbox"  name="Area of Interest" value="Data Science">Data Science
+        </label><br>
+    </fieldset>
+    <br>
+    
+    <br>
+      <fieldset>
+        <legend>Programming Skill Level</legend>
+        <label for="range">Rate your skill (0 to 10):</label>
+        <br>
+        <input type="range" id="range">
+    </fieldset>
+    <br>
+      <fieldset>
+        <legend>Upload your Photo</legend>
+        <label for="photo"></label>
+        <input type="file" id="photo" accept=".jpg,.png">
+    </fieldset>
+    <br>
+    <button type="submit">submit</button>
+    <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

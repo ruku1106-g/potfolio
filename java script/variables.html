@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+</head>
+<body>
+    <h2> variables in Js</h2>
+    <script>
+        //var
+      var a=10;// decalring
+      console.log(a);
+      var a=20; //redecalring
+      console.log(a);
+      a=30; // reassigning
+      console.log(a);
+     //function scope : if u call it outside the function it gives an error
+     function ex(){
+        var x =10;
+        document.writeln(x); // inside the fucntion itself , if u call it outside the fucntion it will give an error
+     }
+        ex();
+
+        // let
+       let b =10;
+       console.log(b);
+    //    let b =20;
+    //    console.log(b); // redeclaration is not possible
+       b=30;
+       console.log(b); // reassign is possible
+       // block scope
+       {
+        let x=100;
+        console.log(x); // u can access only inside the block
+       }
+       console.log(x); // u cant access outside the block
+    // for var it wont give anuy errorr
+       {
+        var x=200;
+        console.log(x); // u can access only inside the block
+       }
+       console.log(x); // u can access outside the block
+
+
+       //const
+       const pie =3.14;
+       console.log("value of pie:" +pie);
+
+    //    const pie =5.14;
+    //    pie=4.13   u cant redecalre and reassign the const
+   // block scope
+   {
+    const y =3.14; 
+    console.log(y);// u can only access it in inside the block as it is block scope
+   }
+   </script>
+</body>
+</html>

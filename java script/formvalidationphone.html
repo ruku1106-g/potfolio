@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id ="myForm">
+        <label for ="ph">Phone number</label>
+        <input type="text" id ="ph">
+        <br>
+        <br>
+        <button type="submit" id ="submit">Submit</button>
+    </form>
+</body>
+<script>
+    const form = document.getElementById("myForm");
+
+    form.addEventListener("submit",(event) => {
+        event.preventDefault();
+    const pn = document.getElementById("ph").value.trim();
+let regex = /^(\+91)?[6-9]\d{9}$/; // question mark means optional
+
+if(!regex.test(pn)) {
+    alert("Invalid number");
+}
+else{
+    alert("valid number");
+}
+  });
+</script>
+</html>

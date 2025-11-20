@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            height:100px;
+            width:100px;
+            background-color:aqua;
+            border:6px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <p id="text">output displayed here</p>
+    <input type="text" id="ip">
+    <h1 id="output">:)</h1>
+    <script>
+        //mouse event(click)
+  const box=document.getElementById("box");
+  box.addEventListener("c lick", ()=>{
+     box.style.backgroundColor="red";
+  });
+//mouse event(dblclick)
+  
+  box.addEventListener("dblclick", ()=>{
+     box.style.backgroundColor="yellow";
+  });
+  //mouseover
+ box.addEventListener("mouseover", ()=>{
+     box.style.backgroundColor="cyan";
+     //alert("you hoverd on box");
+  });
+  //mouseout
+   box.addEventListener("mouseout", ()=>{
+     box.style.backgroundColor="white";
+  });
+//mousemove
+   box.addEventListener("mousemove", (event)=>{ // so here event is like 
+    //box.innerText = `x: ${event.offsetX} and y: ${event.offsetY}`; //so here the offset is coordinate will give us the value of x and y when the event is occuring
+     document.getElementById("text").textContent= `x: ${event.offsetX} and y: ${event.offsetY}`;
+});
+
+//keyboard events
+//keydown: its reads the key which is pressed
+const ip = document.getElementById("ip");
+ip.addEventListener("keydown", (e) => { // we make use of e / event here is to make use of inbuilt functions inside the event class 
+    console.log(`The key pressed(keydown):  ${e.key}`); 
+});
+
+//keyup
+ip.addEventListener("keyup", (e) =>  {
+    console.log(`The key released(keyup):  ${e.key}`);
+}); 
+
+//keypress 
+ip.addEventListener("keypress",(e)=> { // so here we make use of keypress to avoid the speacial char like space,enter and all ok na
+ console.log(`${e.key}`); // but only if u dont make use of keyup and down
+});
+    </script> 
+</body>
+</html>

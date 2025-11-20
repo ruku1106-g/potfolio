@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom maipulation styles </title>
+<style>
+    .highlight {
+        color:red;
+        background-color:yellow;
+        font-weight:bold;
+    }
+</style>
+</head>
+
+<body>
+    <h1 id="text">DOM maipulation using classes</h1>
+    <button onclick="add()">Add Highlight</button>
+    <button onclick="remove()">remove Highlight</button>
+    <button onclick="toggle()">toggle Highlight</button>
+    <button onclick="checkh()">Check Highlight</button>
+    
+    <script>
+        let text = document.getElementById("text");
+function add(){
+text.classList.add("highlight");
+}
+
+function remove(){
+    text.classList.remove("highlight");
+}
+
+function toggle(){
+    text.classList.toggle("highlight");
+}
+
+function checkh(){
+    if(text.classList.contains("highlight")){
+        alert("highlight class is applied !!");
+    }
+    else{
+        alert("Highlight class is NOT applied");
+}
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom in js</title>
+</head>
+<body>
+    <h1 id="head">Heading</h1>
+    <h1 id = "h">Heading</h1>
+    <p class="p">para 1</p>
+    <p>para 2</p>
+    <p class="p">para 3</p>
+    <p>para 4</p>
+
+
+    <button onclick="change()">click for change</button>
+
+    <script> 
+
+document.querySelector(".p").style.color="purple"; // it chnages the bg color to purple only the 1st element p.
+const paras=document.querySelectorAll(".p"); // it chnages the bg color to purple only the 1st element p.
+for(let i =0;i<paras.length;i++){
+    paras[i].style.backgroundColor="pink";
+}
+const para = document.getElementsByClassName("p");
+for(i=0;i<para.length;i++){
+    para[i].style.backgroundColor="yellow";
+    para[i].style.fontWeight = "bold";
+    para[i].textContent = "Odd para";
+}
+    function change(){
+    //individual elemenst
+     document.getElementsByTagName("p")[0].style.color="red";  // so here [0] is for 1st para
+     document.getElementsByTagName("p")[1].style.color="yellow";  // so here [1] is for 2st para
+ 
+     // for all elements
+    const para =  document.getElementsByTagName("p"); 
+    for(i=0;i<para.length;i++){
+        para[i].style.backgroundColor="cyan";
+        para[i].style.fontSize="30px";
+    }
+
+    document.getElementById("head").textContent="DOM in java script"; // so here we are maing use of textContent to fetch the content inside the head --> 
+    document.getElementById("head").innerText="DOM in java script"; // innerText  its same as textContent but u cant use both innerText and innerHTML at a time only 1 u can make use of 
+    document.getElementById("h").innerHTML = "<u><i> DOM JS </i></u>"; //if we want tot chnage the text and the structure we make use of innerHTML
+    }
+    
+    </script>
+</body>
+</html> 

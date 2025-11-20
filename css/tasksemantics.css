@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, nav, section, article, aside, footer {
+    background-color: pink;
+    color: purple;
+    border: 1px solid purple;
+    text-align: center;
+    padding: 20px;
+    margin: 5px;
+}
+
+/* layout for middle part */
+.middle {
+    display: flex;
+    gap: 10px;
+}
+
+.left {
+    flex: 1; /* bigger left section */
+}
+
+aside {
+    flex: 1; /* smaller aside */
+}
+
+.foot {
+    margin-top: 10px;
+}

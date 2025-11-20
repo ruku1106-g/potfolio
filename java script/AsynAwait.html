@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// async function main() {
+//     await new Promise((resolve) => setTimeout(resolve,1000));
+//         console.log("open book my show App");
+
+//    await new Promise((resolve) => setTimeout(resolve,5000));
+//          console.log("search movie");
+   
+//    await new Promise((resolve) => setTimeout(resolve,3000));
+//          console.log("select time");
+
+//    await new Promise((resolve) => setTimeout(resolve,8000));
+//          console.log("select seat");
+   
+//     await new Promise((resolve) => setTimeout(resolve,2000));
+//         console.log("book ticket");
+//         }
+
+        //even this is not good manner to do as everytime we are giving new promise
+   
+   //main();// we have to call this or else it will not work
+
+
+     // minimized one 
+   function wait(ms){ // as only the time is changing , so here we will pass the time from user and pass it as function
+    return new Promise((resolve) => setTimeout(resolve, ms))
+   }
+ 
+   async function BookTicket(){
+    try{
+        const app="BMS";
+        await wait(2000); // calling the function wait()
+        if(app === "BMS"){
+            console.log("1.open book my show");
+        }
+        else {
+            throw new Error("Bms not found");
+        }
+
+        await wait(4000);
+        console.log("2.search for movie ");
+
+        await wait(3000);
+        console.log("3.select seats");
+
+        await wait(5000);
+        console.log("4.ticket booked");
+
+    }
+    catch(e){
+        console.log(e);
+    }
+    finally{
+        console.log("close phone");
+    }
+   }
+
+   BookTicket();
+
+   </script>
+</body>
+</html>

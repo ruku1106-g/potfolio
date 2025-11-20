@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body><h1>login form</h1>
+    <form autocomplete="off"><!-- if u dont want the suggestion for entire web page u can make use of this inside the form -->
+      <label for="name">name *:</label><!-- if want to tell that is required before the submitting only u can use *-->
+      <input type="text" id="name" name="username" placeholder="enter ur name" title="give valid name" required><!-- required is used to tell that if u want that field to be enterd mandetory-->
+      <br> <br>
+      <label for="name">password :</label>
+      <input type="password" id="pass" name="password" placeholder="atleast 6 character long" title="enter passowrd">
+    <!-- so here we used title and placeholder , so placeholder is used to give extra information for users 
+     and title is used to to give extra information like when u hover on the i/p field u will get the title -->
+      <br><br>
+      <label for="email">email:</label>
+      <input type="email" id="email" name="email" autocomplete="off"><!-- if u give email in wrong it will give an error and the email should be valid and we used autocomplete ryt so when we click on input field it will suggest ryt so if we dont want that to be suggested we can off that-->
+      <br><br>
+      <label for="age">age:</label>
+      <input type="number" id="age" name="age" min="1" max="100"><!--  if u want to give a number and symbols also like +,- and all u can give and u can use max number and min number also -->
+      <br><br>
+      <label>Date:</label>
+      <input type="date"><br> <!-- to get only date-->
+      <label>Date and time:</label>
+      <input type="datetime-local"><br><br> <!-- to get date and time -->
+      <label>time:</label>
+      <input type="time"><br><br> <!-- to get only time -->
+      <label>url:</label>
+     <input type="url"><br><br><!-- if u want to collect the url from the user u can use url-->
+     
+     <!--chcek box,radio button and all-->
+     <!-- so here we are using chcek box where we can select multiple options ok na
+      and next we need to give the label for each checkbox to map to the equalent checkbox-->
+
+      <fieldset> <!-- fieldset is used to group the fields-->
+    <br>
+    <legend>extra information</legend>  <!-- legend is used to give the name for the fieldset-->
+      <label>choose tech:</label>
+     <label>
+        <input type="checkbox" name="option1">html  <!-- so here if u just give name it will tell the to the url that option=on
+         but if we want to tell wht value is passed u can use value and value is used to pass the value to the url-->
+        </label>
+        <label>
+        <input type="checkbox" name="option2" value="css">css
+        </label>
+        <label>
+        <input type="checkbox" name="option3" value="js">js
+     </label>
+     <label>
+        <input type="checkbox" name="option4" value="all" checked>all <!-- if u want the checkbox to be checked by default-->
+     </label>
+     <br>
+     <label>
+        <input type="radio" name="gender" value="female">female
+     </label>   <!-- so here as we used name as same as gender ,we can select only 1 option not more then 1 so if u give differnt u can select more than 1-->
+      <label>
+        <input type="radio" name="gender" value="male">male
+     </label> 
+<br>
+<label>upload resume:
+        <input type="file" name="upload file">
+     </label> 
+     <br>
+     <!-- if u want to upload only the files like pdf,jpg and all u can use accept keyword-->
+     <label for="file">upload resume:
+        <input type="file" id="file" name="upload file" accept=".jpg .pdf .png">
+     </label> 
+
+     <br>
+     <label for="range">rate (html):
+        <input type="range" id="range" name="range" min="1" max="10">
+     </label> 
+<br>
+      <label for="color">choose a color:
+        <input type="color" id="color" name="color">
+     </label> <br>
+     <label for="search">type wht u need to search:
+        <input type="search" id="search" name="search"><!-- see we have so many attributes like tel,week,hidden and so many-->
+     </label> <br>
+
+     <!-- we use select for creating a drop down list-->
+     <label for="select">select tech:</label>
+     <select id="select" name="tech" value="option">
+        <option>java</option>
+        <option>sql</option>
+        <option>frontend</option>
+     </select>
+     <br>
+     </fieldset> <!-- end of fieldset-->
+<br><br>
+     <!-- if u want a text area to be big in size u can use textarea -->
+    <label for="cmt">your comment:</label>
+    <textarea id="cmt" name="comments" rows="10" cols="20">
+    </textarea>
+
+     <button type="submit" value="submit">signin</button>
+      <button type="submit">signup</button>
+    </form>
+</body>
+</html>
